@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  h1= title
+  a(href='http://localhost:3000/new')
+      button.compose= "got something to say?"
+  .boxs 
+     each message in messages
+         .box
+            h2= message.text
+            h4= message.user
+            p= message.added
